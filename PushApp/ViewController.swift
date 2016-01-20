@@ -6,10 +6,14 @@
 //  Copyright © 2016 dare. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import SpriteKit
 
 class ViewController: UIViewController {
+    
+    let usernameTxtField = UITextField()
+    let passTxtField = UITextField()
     
     @IBOutlet weak var stackView: UIStackView!
     
@@ -26,7 +30,6 @@ class ViewController: UIViewController {
         view.heightAnchor.constraintEqualToConstant(self.view.frame.size.height * 0.4).active = true
         stackView.addArrangedSubview(view)
         
-        let usernameTxtField = UITextField()
 //        usernameTxtField.placeholder = "username"
         usernameTxtField.backgroundColor = UIColor(red: 194/255, green: 79/255, blue: 209/255, alpha: 0.6)
 //        usernameTxtField.textColor = UIColor.greenColor()
@@ -43,8 +46,7 @@ class ViewController: UIViewController {
         
         stackView.addArrangedSubview(usernameTxtField)
         
-        
-        let passTxtField = UITextField()
+    
 //        passTxtField.placeholder = "*******"
         passTxtField.secureTextEntry = true
         passTxtField.backgroundColor = UIColor(red: 194/255, green: 79/255, blue: 209/255, alpha: 0.6)
@@ -58,6 +60,8 @@ class ViewController: UIViewController {
 //        bottomBorder.backgroundColor = UIColor.blackColor().CGColor
 //        passTxtField.layer.addSublayer(bottomBorder)
         
+        
+        passTxtField.addTarget(self, action: "onEditingChanged", forControlEvents: UIControlEvents.EditingChanged)
         stackView.addArrangedSubview(passTxtField)
         
         let view2 = UIView()
@@ -71,6 +75,14 @@ class ViewController: UIViewController {
 
     }
 
+    @IBAction private func onEditingChanged()
+    {
+        if(usernameTxtField.text?.caseInsensitiveCompare("user") == NSComparisonResult.OrderedSame && passTxtField.text?.caseInsensitiveCompare("pass") == NSComparisonResult.OrderedSame)
+        {
+            performSegueWithIdentifier("loginSegue", sender: self)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
