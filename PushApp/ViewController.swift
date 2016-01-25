@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import SpriteKit
 
 class ViewController: UIViewController {
     
@@ -43,7 +42,7 @@ class ViewController: UIViewController {
 //        bottomBorder.frame = CGRectMake(0.0, usernameTxtField.frame.size.height - 1, usernameTxtField.frame.size.width, 1.0);
 //        bottomBorder.backgroundColor = UIColor.blackColor().CGColor
 //        usernameTxtField.layer.addSublayer(bottomBorder)
-        
+        usernameTxtField.addTarget(self, action: "onEditingChanged", forControlEvents: UIControlEvents.EditingChanged)
         stackView.addArrangedSubview(usernameTxtField)
         
     

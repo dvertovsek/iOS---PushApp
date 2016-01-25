@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02DB649BFF0F2C12CD1D34D9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D33E0745FEAF9321D25184 /* Pods.framework */; };
+		5243A9CC1C4FA5B000E438C3 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243A9CB1C4FA5B000E438C3 /* TodoTableViewController.swift */; };
+		5243A9CE1C4FA5CA00E438C3 /* TodoSchedulingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243A9CD1C4FA5CA00E438C3 /* TodoSchedulingViewController.swift */; };
+		5243A9D01C4FADBF00E438C3 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243A9CF1C4FADBF00E438C3 /* TodoItem.swift */; };
+		5243A9D21C4FAF0600E438C3 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243A9D11C4FAF0600E438C3 /* TodoList.swift */; };
+		525C481E1C52B28C0099F7DF /* PushAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C481D1C52B28C0099F7DF /* PushAppTests.swift */; };
 		52621E531C4D37A000DF54DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52621E521C4D37A000DF54DF /* AppDelegate.swift */; };
 		52621E551C4D37A000DF54DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52621E541C4D37A000DF54DF /* ViewController.swift */; };
 		52621E581C4D37A000DF54DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52621E561C4D37A000DF54DF /* Main.storyboard */; };
@@ -14,7 +20,25 @@
 		52621E5D1C4D37A000DF54DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52621E5B1C4D37A000DF54DF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		525C48201C52B28D0099F7DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52621E471C4D37A000DF54DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52621E4E1C4D37A000DF54DF;
+			remoteInfo = PushApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		02806E08F8BF01B832E66673 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5243A9CB1C4FA5B000E438C3 /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		5243A9CD1C4FA5CA00E438C3 /* TodoSchedulingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoSchedulingViewController.swift; sourceTree = "<group>"; };
+		5243A9CF1C4FADBF00E438C3 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		5243A9D11C4FAF0600E438C3 /* TodoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		525C481B1C52B28C0099F7DF /* PushAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		525C481D1C52B28C0099F7DF /* PushAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAppTests.swift; sourceTree = "<group>"; };
+		525C481F1C52B28D0099F7DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52621E4F1C4D37A000DF54DF /* PushApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52621E521C4D37A000DF54DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52621E541C4D37A000DF54DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,24 +46,63 @@
 		52621E591C4D37A000DF54DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52621E5C1C4D37A000DF54DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52621E5E1C4D37A000DF54DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66D468C6AE722A230E033CC9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C5D33E0745FEAF9321D25184 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		52621E4C1C4D37A000DF54DF /* Frameworks */ = {
+		525C48181C52B28C0099F7DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52621E4C1C4D37A000DF54DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02DB649BFF0F2C12CD1D34D9 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FBDFD112C0F3D1473A7C6CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5D33E0745FEAF9321D25184 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5090B3B34ACB8273A14F15B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02806E08F8BF01B832E66673 /* Pods.debug.xcconfig */,
+				66D468C6AE722A230E033CC9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		525C481C1C52B28C0099F7DF /* PushAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				525C481D1C52B28C0099F7DF /* PushAppTests.swift */,
+				525C481F1C52B28D0099F7DF /* Info.plist */,
+			);
+			path = PushAppTests;
+			sourceTree = "<group>";
+		};
 		52621E461C4D37A000DF54DF = {
 			isa = PBXGroup;
 			children = (
 				52621E511C4D37A000DF54DF /* PushApp */,
+				525C481C1C52B28C0099F7DF /* PushAppTests */,
 				52621E501C4D37A000DF54DF /* Products */,
+				5090B3B34ACB8273A14F15B2 /* Pods */,
+				1FBDFD112C0F3D1473A7C6CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				52621E4F1C4D37A000DF54DF /* PushApp.app */,
+				525C481B1C52B28C0099F7DF /* PushAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +124,10 @@
 				52621E591C4D37A000DF54DF /* Assets.xcassets */,
 				52621E5B1C4D37A000DF54DF /* LaunchScreen.storyboard */,
 				52621E5E1C4D37A000DF54DF /* Info.plist */,
+				5243A9CB1C4FA5B000E438C3 /* TodoTableViewController.swift */,
+				5243A9CD1C4FA5CA00E438C3 /* TodoSchedulingViewController.swift */,
+				5243A9CF1C4FADBF00E438C3 /* TodoItem.swift */,
+				5243A9D11C4FAF0600E438C3 /* TodoList.swift */,
 			);
 			path = PushApp;
 			sourceTree = "<group>";
@@ -67,13 +135,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		525C481A1C52B28C0099F7DF /* PushAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 525C48241C52B28D0099F7DF /* Build configuration list for PBXNativeTarget "PushAppTests" */;
+			buildPhases = (
+				525C48171C52B28C0099F7DF /* Sources */,
+				525C48181C52B28C0099F7DF /* Frameworks */,
+				525C48191C52B28C0099F7DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				525C48211C52B28D0099F7DF /* PBXTargetDependency */,
+			);
+			name = PushAppTests;
+			productName = PushAppTests;
+			productReference = 525C481B1C52B28C0099F7DF /* PushAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		52621E4E1C4D37A000DF54DF /* PushApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52621E611C4D37A000DF54DF /* Build configuration list for PBXNativeTarget "PushApp" */;
 			buildPhases = (
+				8CB2BE289D037D227D687151 /* Check Pods Manifest.lock */,
 				52621E4B1C4D37A000DF54DF /* Sources */,
 				52621E4C1C4D37A000DF54DF /* Frameworks */,
 				52621E4D1C4D37A000DF54DF /* Resources */,
+				EBCC9AFFEF2B6F4C352000FB /* Embed Pods Frameworks */,
+				58D8F28A1425768771CB776D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -94,6 +183,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = dare;
 				TargetAttributes = {
+					525C481A1C52B28C0099F7DF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 52621E4E1C4D37A000DF54DF;
+					};
 					52621E4E1C4D37A000DF54DF = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -113,11 +206,19 @@
 			projectRoot = "";
 			targets = (
 				52621E4E1C4D37A000DF54DF /* PushApp */,
+				525C481A1C52B28C0099F7DF /* PushAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		525C48191C52B28C0099F7DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52621E4D1C4D37A000DF54DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,17 +231,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		58D8F28A1425768771CB776D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CB2BE289D037D227D687151 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBCC9AFFEF2B6F4C352000FB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		525C48171C52B28C0099F7DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				525C481E1C52B28C0099F7DF /* PushAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52621E4B1C4D37A000DF54DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5243A9D01C4FADBF00E438C3 /* TodoItem.swift in Sources */,
+				5243A9CE1C4FA5CA00E438C3 /* TodoSchedulingViewController.swift in Sources */,
 				52621E551C4D37A000DF54DF /* ViewController.swift in Sources */,
+				5243A9D21C4FAF0600E438C3 /* TodoList.swift in Sources */,
+				5243A9CC1C4FA5B000E438C3 /* TodoTableViewController.swift in Sources */,
 				52621E531C4D37A000DF54DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		525C48211C52B28D0099F7DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52621E4E1C4D37A000DF54DF /* PushApp */;
+			targetProxy = 525C48201C52B28D0099F7DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		52621E561C4D37A000DF54DF /* Main.storyboard */ = {
@@ -162,6 +331,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		525C48221C52B28D0099F7DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PushAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dare.PushAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PushApp.app/PushApp";
+			};
+			name = Debug;
+		};
+		525C48231C52B28D0099F7DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PushAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dare.PushAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PushApp.app/PushApp";
+			};
+			name = Release;
+		};
 		52621E5F1C4D37A000DF54DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -247,6 +440,7 @@
 		};
 		52621E621C4D37A000DF54DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02806E08F8BF01B832E66673 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PushApp/Info.plist;
@@ -258,6 +452,7 @@
 		};
 		52621E631C4D37A000DF54DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66D468C6AE722A230E033CC9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PushApp/Info.plist;
@@ -270,6 +465,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		525C48241C52B28D0099F7DF /* Build configuration list for PBXNativeTarget "PushAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				525C48221C52B28D0099F7DF /* Debug */,
+				525C48231C52B28D0099F7DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		52621E4A1C4D37A000DF54DF /* Build configuration list for PBXProject "PushApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -286,6 +489,7 @@
 				52621E631C4D37A000DF54DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

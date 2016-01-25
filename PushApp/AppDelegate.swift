@@ -15,16 +15,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let completeAction = UIMutableUserNotificationAction()
+        completeAction.identifier = "COMPLETE_TODO"
+        completeAction.title = "Complete"
+        completeAction.activationMode = .Background
+        completeAction.authenticationRequired = false
+        completeAction.destructive = true
         
-        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert,.Badge,.Sound], categories: nil))
+        let remindAction = UIMutableUserNotificationAction()
+        remindAction.identifier = "REMIND"
+        remindAction.title = "Remind me in 30 minutes"
+        remindAction.activationMode = .Background
+        remindAction.destructive = false
         
+        let todoCategory = UIMutableUserNotificationCategory()
+        todoCategory.identifier = "TODO_CATEGORY"
+        todoCategory.setActions([remindAction,completeAction], forContext: .Default)
+        todoCategory.setActions([completeAction,remindAction], forContext: .Minimal)
+        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert,.Badge,.Sound], categories: [todoCategory]))
         return true
     }
-
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        
+        let item = TodoItem(deadline: notification.fireDate!, title: notification.userInfo!["title"] as! String, UUID: notification.userInfo!["UUID"] as! String!)
+        
+        switch(identifier!)
+        {
+            case "COMPLETE_TODO":
+                TodoList.sharedInstance.removeItem(item)
+                break
+            case "REMIND":
+                TodoList.sharedInstance.scheduleReminderForItem(item)
+                break
+            default:
+                print("Error: unexpected notification action identifier")
+        }
+        completionHandler()
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        NSNotificationCenter.defaultCenter().postNotificationName("TodoListShouldRefresh", object: self)
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        let todoItems: [TodoItem] = TodoList.sharedInstance.allItems()
+        let overdueItems = todoItems.filter({ (todoItem) -> Bool in
+            return todoItem.deadline.compare(NSDate()) != .OrderedDescending
+        })
+        UIApplication.sharedApplication().applicationIconBadgeNumber = overdueItems.count
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -37,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        NSNotificationCenter.defaultCenter().postNotificationName("TodoListShouldRefresh", object: self)
     }
 
     func applicationWillTerminate(application: UIApplication) {
