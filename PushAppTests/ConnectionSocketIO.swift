@@ -1,10 +1,3 @@
-//
-//  ConnectionSocketIO.swift
-//  PushApp
-//
-//  Created by MTLab on 28/01/16.
-//  Copyright © 2016 dare. All rights reserved.
-//
 import SocketIOClientSwift
 
 public class ConnectionSocketIO {

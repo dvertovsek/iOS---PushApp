@@ -19,6 +19,8 @@
 		52621E5A1C4D37A000DF54DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52621E591C4D37A000DF54DF /* Assets.xcassets */; };
 		52621E5D1C4D37A000DF54DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52621E5B1C4D37A000DF54DF /* LaunchScreen.storyboard */; };
 		5277793D1C5A3F7E0096712B /* ConnectionSocketIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277793C1C5A3F7E0096712B /* ConnectionSocketIO.swift */; };
+		5277793F1C5A41D50096712B /* ConnStarscreamSockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277793E1C5A41D50096712B /* ConnStarscreamSockets.swift */; };
+		527779411C5A44970096712B /* ConnCocoaAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527779401C5A44970096712B /* ConnCocoaAsync.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		52621E5C1C4D37A000DF54DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52621E5E1C4D37A000DF54DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5277793C1C5A3F7E0096712B /* ConnectionSocketIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionSocketIO.swift; sourceTree = "<group>"; };
+		5277793E1C5A41D50096712B /* ConnStarscreamSockets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnStarscreamSockets.swift; sourceTree = "<group>"; };
+		527779401C5A44970096712B /* ConnCocoaAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnCocoaAsync.swift; sourceTree = "<group>"; };
 		66D468C6AE722A230E033CC9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C5D33E0745FEAF9321D25184 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,8 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				525C481D1C52B28C0099F7DF /* PushAppTests.swift */,
+				527779401C5A44970096712B /* ConnCocoaAsync.swift */,
 				525C481F1C52B28D0099F7DF /* Info.plist */,
 				5277793C1C5A3F7E0096712B /* ConnectionSocketIO.swift */,
+				5277793E1C5A41D50096712B /* ConnStarscreamSockets.swift */,
 			);
 			path = PushAppTests;
 			sourceTree = "<group>";
@@ -287,8 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527779411C5A44970096712B /* ConnCocoaAsync.swift in Sources */,
 				5277793D1C5A3F7E0096712B /* ConnectionSocketIO.swift in Sources */,
 				525C481E1C52B28C0099F7DF /* PushAppTests.swift in Sources */,
+				5277793F1C5A41D50096712B /* ConnStarscreamSockets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

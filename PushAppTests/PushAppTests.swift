@@ -20,23 +20,20 @@ class PushAppTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSockets() {
+    func testStarscreamSockets() {
         
-//        let url = "10.24.11.69:8900"
+//        let urlString = "ws://127.0.0.1:8907"
         let urlString = "ws://10.24.11.69:8907"
-        let url = NSURL(string: urlString)!
-        let socket = WebSocket(url: url)
+        
+        let con = ConnStarscreamSocket(urlString: urlString)
         
         let expectation = expectationWithDescription("nije spojio se na socket")
-        
-        socket.onConnect = {
 
+        con.connect(){
             expectation.fulfill()
         }
         
-        socket.connect()
- 
-        waitForExpectationsWithTimeout(4, handler: nil)
+        waitForExpectationsWithTimeout(8, handler: nil)
     }
     
     func testSocketIO()
@@ -52,10 +49,15 @@ class PushAppTests: XCTestCase {
         }
         
         
-        waitForExpectationsWithTimeout(4, handler: nil)
+        waitForExpectationsWithTimeout(10, handler: nil)
 
     }
     
-        
-    
+    func testCocoaAsync(){
+//        let server = "127.0.0.1"
+        let server = "10.24.11.69"
+        let port:UInt16 = 8907
+        let con = ConnCocoaAsync(server: server, port: port)
+        con.send("ejej")
+    }
 }
