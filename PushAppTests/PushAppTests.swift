@@ -65,12 +65,19 @@ class PushAppTests: XCTestCase {
         let client:TCPClient = TCPClient(addr: "10.24.11.69", port: 8907)
         let (connected,_) = client.connect(timeout: 10)
         if connected{
-            var (_,_) = client.send(str:"TCP in the house?\n")
-        }
+            let (sent,_) = client.send(str:"TCP in the house?\n")
+            if sent {
+                let data = client.read(1024*10)
+                if let d = data {
+                    let str = NSString(bytes: d, length: 1024*8, encoding: NSUTF8StringEncoding)
+                    print("response:",str)
+                    }
+                }
+            }
         
         let clientudp:UDPClient = UDPClient(addr: "10.24.11.69", port: 8907)
         var (_,_) = clientudp.send(str:"UDP salje ovo?\n")
-        
+    
         
         XCTAssertNotNil(client)
     }
