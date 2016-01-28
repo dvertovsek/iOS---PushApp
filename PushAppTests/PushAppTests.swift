@@ -7,8 +7,7 @@
 //
 
 import XCTest
-//import SocketIOClientSwift
-import Starscream
+//import Starscream
 class PushAppTests: XCTestCase {
     
     override func setUp() {
@@ -42,22 +41,21 @@ class PushAppTests: XCTestCase {
     
     func testSocketIO()
     {
-//        let urlString = "10.24.11.69:8907"
-//        let url = NSURL(string: urlString)!
-//        let socket = SocketIOClient(socketURL: urlString)
-//        
-//        let expectation = expectationWithDescription("nije spojio se na socket")
-//        
-//        socket.on("connect"){_,_ in 
-//
-//            expectation.fulfill()
-//        }
-//        
-//        socket.connect()
-//        
-//        waitForExpectationsWithTimeout(10, handler: nil)
-    }
+        let urlString = "10.24.11.69:8907"
+//        let urlString = "127.0.0.1:8907"
         
+        let expectation = expectationWithDescription("nije spojio se na socket")
+        let con = ConnectionSocketIO(urlString: urlString)
+        
+        con.connect(){
+            expectation.fulfill()
+        }
+        
+        
+        waitForExpectationsWithTimeout(4, handler: nil)
+
+    }
+    
         
     
 }
