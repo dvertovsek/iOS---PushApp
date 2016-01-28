@@ -60,4 +60,23 @@ class PushAppTests: XCTestCase {
         let con = ConnCocoaAsync(server: server, port: port)
         con.send("ejej")
     }
+    
+    func testSwiftSocketsKinezi(){
+        let client:TCPClient = TCPClient(addr: "10.24.11.69", port: 8907)
+        let (connected,_) = client.connect(timeout: 10)
+        if connected{
+            var (_,_) = client.send(str:"TCP in the house?\n")
+        }
+        
+        let clientudp:UDPClient = UDPClient(addr: "10.24.11.69", port: 8907)
+        var (_,_) = clientudp.send(str:"UDP salje ovo?\n")
+        
+        
+        XCTAssertNotNil(client)
+    }
+    
+    func testSwiftSocketsServer(){
+        let udpServer = UDPServer(addr: "127.0.0.1", port: 1234)
+        var (array,string,int) = udpServer.recv(1024*10)
+    }
 }

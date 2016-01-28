@@ -102,7 +102,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PushAppTests/ConnCocoaAsync.swift"
@@ -112,6 +112,86 @@
             startingLineNumber = "11"
             endingLineNumber = "11"
             landmarkName = "init(server:port:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PushAppTests/ConnCocoaAsync.swift"
+            timestampString = "475678902.52165"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "init(server:port:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PushAppTests/PushAppTests.swift"
+            timestampString = "475680722.965633"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "testSwiftSocketsKinezi()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PushAppTests.PushAppTests.testSwiftSocketsKinezi (PushAppTests.PushAppTests)() -&gt; ()"
+                  moduleName = "PushAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MTLab/Documents/PushApp/PushAppTests/PushAppTests.swift"
+                  timestampString = "475680824.132317"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "532">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PushAppTests.PushAppTests.(testSwiftSocketsKinezi (PushAppTests.PushAppTests) -&gt; () -&gt; ()).(implicit closure #1)"
+                  moduleName = "PushAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MTLab/Documents/PushApp/PushAppTests/PushAppTests.swift"
+                  timestampString = "475680824.132492"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "18">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PushAppTests/PushAppTests.swift"
+            timestampString = "475680811.144022"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "testSwiftSocketsKinezi()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

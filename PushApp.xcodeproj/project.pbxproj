@@ -21,6 +21,12 @@
 		5277793D1C5A3F7E0096712B /* ConnectionSocketIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277793C1C5A3F7E0096712B /* ConnectionSocketIO.swift */; };
 		5277793F1C5A41D50096712B /* ConnStarscreamSockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277793E1C5A41D50096712B /* ConnStarscreamSockets.swift */; };
 		527779411C5A44970096712B /* ConnCocoaAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527779401C5A44970096712B /* ConnCocoaAsync.swift */; };
+		527779431C5A49B00096712B /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527779421C5A49B00096712B /* ysocket.swift */; };
+		527779481C5A4A0B0096712B /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 527779441C5A4A0B0096712B /* ytcpsocket.c */; };
+		527779491C5A4A0B0096712B /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527779451C5A4A0B0096712B /* ytcpsocket.swift */; };
+		5277794A1C5A4A0B0096712B /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 527779461C5A4A0B0096712B /* yudpsocket.c */; };
+		5277794B1C5A4A0B0096712B /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527779471C5A4A0B0096712B /* yudpsocket.swift */; };
+		5277794D1C5A4A810096712B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5277794C1C5A4A810096712B /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,12 @@
 		5277793C1C5A3F7E0096712B /* ConnectionSocketIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionSocketIO.swift; sourceTree = "<group>"; };
 		5277793E1C5A41D50096712B /* ConnStarscreamSockets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnStarscreamSockets.swift; sourceTree = "<group>"; };
 		527779401C5A44970096712B /* ConnCocoaAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnCocoaAsync.swift; sourceTree = "<group>"; };
+		527779421C5A49B00096712B /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		527779441C5A4A0B0096712B /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		527779451C5A4A0B0096712B /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		527779461C5A4A0B0096712B /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		527779471C5A4A0B0096712B /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		5277794C1C5A4A810096712B /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		66D468C6AE722A230E033CC9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C5D33E0745FEAF9321D25184 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +107,7 @@
 		525C481C1C52B28C0099F7DF /* PushAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				5277794E1C5A4CD70096712B /* chinese sockets */,
 				525C481D1C52B28C0099F7DF /* PushAppTests.swift */,
 				527779401C5A44970096712B /* ConnCocoaAsync.swift */,
 				525C481F1C52B28D0099F7DF /* Info.plist */,
@@ -139,6 +152,19 @@
 				5243A9D11C4FAF0600E438C3 /* TodoList.swift */,
 			);
 			path = PushApp;
+			sourceTree = "<group>";
+		};
+		5277794E1C5A4CD70096712B /* chinese sockets */ = {
+			isa = PBXGroup;
+			children = (
+				527779421C5A49B00096712B /* ysocket.swift */,
+				527779441C5A4A0B0096712B /* ytcpsocket.c */,
+				527779451C5A4A0B0096712B /* ytcpsocket.swift */,
+				527779461C5A4A0B0096712B /* yudpsocket.c */,
+				527779471C5A4A0B0096712B /* yudpsocket.swift */,
+				5277794C1C5A4A810096712B /* main.swift */,
+			);
+			name = "chinese sockets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,9 +319,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5277794A1C5A4A0B0096712B /* yudpsocket.c in Sources */,
 				527779411C5A44970096712B /* ConnCocoaAsync.swift in Sources */,
 				5277793D1C5A3F7E0096712B /* ConnectionSocketIO.swift in Sources */,
 				525C481E1C52B28C0099F7DF /* PushAppTests.swift in Sources */,
+				527779431C5A49B00096712B /* ysocket.swift in Sources */,
+				527779481C5A4A0B0096712B /* ytcpsocket.c in Sources */,
+				5277794D1C5A4A810096712B /* main.swift in Sources */,
+				5277794B1C5A4A0B0096712B /* yudpsocket.swift in Sources */,
+				527779491C5A4A0B0096712B /* ytcpsocket.swift in Sources */,
 				5277793F1C5A41D50096712B /* ConnStarscreamSockets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,10 +379,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PushAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dare.PushAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PushApp.app/PushApp";
 			};
 			name = Debug;
@@ -359,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PushAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dare.PushAppTests;
